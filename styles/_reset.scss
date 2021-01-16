@@ -1,17 +1,38 @@
 // Font Maps
 
 $p-font-sizes: (
-  null: 1.5rem,
+  null: 1.4rem,
   480px: 1.6rem,
   640px: 1.7rem,
   1024px: 1.9rem,
 );
 
 $h1-font-sizes: (
+  null: 3rem,
+  480px: 3.7rem,
+  640px: 4rem,
+  1024px: 4.5rem,
+);
+
+$h2-font-sizes: (
+  null: 4rem,
+  480px: 3.3rem,
+  640px: 3.6rem,
+  1024px: 4rem,
+);
+
+$h3-font-sizes: (
+  null: 3rem,
+  480px: 3.3rem,
+  640px: 3.6rem,
+  1024px: 4rem,
+);
+
+$h4-font-sizes: (
   null: 2rem,
-  480px: 2.2rem,
-  640px: 2.5rem,
-  1024px: 2.8rem,
+  480px: 3.3rem,
+  640px: 3.6rem,
+  1024px: 4rem,
 );
 
 // Mixins
@@ -39,16 +60,27 @@ html {
   font-family: $myfont;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 300;
+}
+
 h1 {
   @include font-size($h1-font-sizes);
 }
 
 h2 {
-  font-size: 3.8rem;
+  @include font-size($h2-font-sizes);
 }
 
 h3 {
-  font-size: 3.6rem;
+  @include font-size($h3-font-sizes);
+}
+
+h4 {
+  @include font-size($h4-font-sizes);
 }
 
 p,

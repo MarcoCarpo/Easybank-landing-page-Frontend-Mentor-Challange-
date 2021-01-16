@@ -1,3 +1,155 @@
+// GENERAL STYLES FOR THIS PAGE
+
+h2,
+a {
+  color: map-get($map: $mycolors, $key: primary-blue);
+}
+
+p {
+  color: map-get($map: $mycolors, $key: grayish-blue);
+  line-height: 1.5;
+}
+
+body {
+  background: map-get($map: $mycolors, $key: very-light-gray);
+}
+
+.invite-btn {
+  display: block;
+  background: map-get($map: $mycolors, $key: my-gradient);
+  color: map-get($map: $mycolors, $key: white);
+  margin: 0 auto;
+  padding: 1.2rem 3rem;
+  border-radius: 3rem;
+  font-size: map-get($p-font-sizes, null) * 0.9;
+}
+
+// HEADER SECTION
+
+header {
+  background: map-get($mycolors, white);
+  @include flex(row, space-between, center);
+  position: relative;
+  padding: 0rem 2rem;
+  z-index: 99;
+}
+
+.logo {
+  margin: 1.75rem 0;
+
+  img {
+    display: block;
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+.burgher {
+  width: 2.5rem;
+  height: 1rem;
+  @include flex(column, space-between, center);
+  gap: 0.25rem;
+  cursor: pointer;
+  position: relative;
+
+  span {
+    background: map-get($map: $mycolors, $key: grayish-blue);
+    width: 100%;
+    height: 20%;
+    border-radius: 0.2rem;
+
+    transition: all 0.3s;
+  }
+}
+
+.nav-bar {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+.invite-btn-header {
+  display: none;
+}
+
+// LANDING SECTION
+
+.landing {
+  position: relative;
+  background: map-get($map: $mycolors, $key: very-light-gray);
+  @include flex(column, center, center);
+  margin-bottom: 7rem;
+
+  &-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &-title {
+    text-align: center;
+  }
+
+  &-descr {
+    text-align: center;
+    margin: 2rem;
+  }
+}
+
+.bg-mobile {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+}
+
+.phones {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -29%);
+  width: 90%;
+}
+
+.invite-btn-landing {
+  margin-top: 3rem;
+}
+
+// SERVICES SECTION
+
+.services {
+  background: map-get($map: $mycolors, $key: light-grayish-blue);
+  text-align: center;
+
+  &-head {
+    padding: 2rem 2.7rem;
+    padding-top: 7rem;
+  }
+
+  &-title {
+    font-weight: 500;
+    opacity: 0.8;
+  }
+
+  &-descr {
+    margin: 2rem 0;
+  }
+}
+
+.service {
+  padding: 2.5rem;
+
+  &-logo {
+    width: 20%;
+  }
+
+  &-title {
+    margin: 2rem 0;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+}
+
+// ATRIBUTION
 .attribution {
   font-size: 11px;
   text-align: center;

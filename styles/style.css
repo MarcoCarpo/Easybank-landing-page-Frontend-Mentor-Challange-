@@ -9,41 +9,106 @@ html {
   font-family: "Public Sans", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 300;
+}
+
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 @media screen and (min-width: 480px) {
   h1 {
-    font-size: 2.2rem;
+    font-size: 3.7rem;
   }
 }
 
 @media screen and (min-width: 640px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
   h1 {
-    font-size: 2.8rem;
+    font-size: 4.5rem;
   }
 }
 
 h2 {
-  font-size: 3.8rem;
+  font-size: 4rem;
+}
+
+@media screen and (min-width: 480px) {
+  h2 {
+    font-size: 3.3rem;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  h2 {
+    font-size: 3.6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h2 {
+    font-size: 4rem;
+  }
 }
 
 h3 {
-  font-size: 3.6rem;
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 480px) {
+  h3 {
+    font-size: 3.3rem;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  h3 {
+    font-size: 3.6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h3 {
+    font-size: 4rem;
+  }
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 480px) {
+  h4 {
+    font-size: 3.3rem;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  h4 {
+    font-size: 3.6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h4 {
+    font-size: 4rem;
+  }
 }
 
 p,
 input,
 button,
 li {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 @media screen and (min-width: 480px) {
@@ -90,6 +155,157 @@ button {
   background: none;
   border: none;
   font-family: "Public Sans", sans-serif;
+}
+
+h2,
+a {
+  color: #2c304d;
+}
+
+p {
+  color: #9698a6;
+  line-height: 1.5;
+}
+
+body {
+  background: #fafafa;
+}
+
+.invite-btn {
+  display: block;
+  background: linear-gradient(to right, #31d35c, #2bb7da);
+  color: white;
+  margin: 0 auto;
+  padding: 1.2rem 3rem;
+  border-radius: 3rem;
+  font-size: 1.26rem;
+}
+
+header {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0rem 2rem;
+  z-index: 99;
+}
+
+.logo {
+  margin: 1.75rem 0;
+}
+
+.logo img {
+  display: block;
+  object-fit: cover;
+  height: 100%;
+}
+
+.burgher {
+  width: 2.5rem;
+  height: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.burgher span {
+  background: #9698a6;
+  width: 100%;
+  height: 20%;
+  border-radius: 0.2rem;
+  transition: all 0.3s;
+}
+
+.nav-bar {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+.invite-btn-header {
+  display: none;
+}
+
+.landing {
+  position: relative;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 7rem;
+}
+
+.landing-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.landing-title {
+  text-align: center;
+}
+
+.landing-descr {
+  text-align: center;
+  margin: 2rem;
+}
+
+.bg-mobile {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+}
+
+.phones {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -29%);
+  width: 90%;
+}
+
+.invite-btn-landing {
+  margin-top: 3rem;
+}
+
+.services {
+  background: #f3f4f6;
+  text-align: center;
+}
+
+.services-head {
+  padding: 2rem 2.7rem;
+  padding-top: 7rem;
+}
+
+.services-title {
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.services-descr {
+  margin: 2rem 0;
+}
+
+.service {
+  padding: 2.5rem;
+}
+
+.service-logo {
+  width: 20%;
+}
+
+.service-title {
+  margin: 2rem 0;
+  font-weight: 500;
+  opacity: 0.8;
 }
 
 .attribution {
