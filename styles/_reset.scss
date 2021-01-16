@@ -81,6 +81,8 @@ h3 {
 
 h4 {
   @include font-size($h4-font-sizes);
+  letter-spacing: 0.01rem;
+  font-weight: 500;
 }
 
 p,

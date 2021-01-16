@@ -149,6 +149,51 @@ header {
   }
 }
 
+.articles {
+  padding-top: 5rem;
+  background: map-get($map: $mycolors, $key: very-light-gray);
+
+  &-title {
+    text-align: center;
+    margin: 3rem;
+  }
+}
+
+.article {
+  background: map-get($map: $mycolors, $key: white);
+  width: 90%;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  &-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &-header,
+  &-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &-header {
+    margin-top: 3rem;
+    padding: 0;
+  }
+
+  &-title {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+  }
+
+  &-descr {
+    line-height: 1.3;
+    margin-bottom: 3.5rem;
+  }
+}
+
 // ATRIBUTION
 .attribution {
   font-size: 11px;
