@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 480px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+}
+
+h2 {
+  font-size: 3.8rem;
+}
+
+h3 {
+  font-size: 3.6rem;
+}
+
+p,
+input,
+button,
+li {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 480px) {
+  p,
+  input,
+  button,
+  li {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  p,
+  input,
+  button,
+  li {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  p,
+  input,
+  button,
+  li {
+    font-size: 1.9rem;
+  }
+}
+
+caption {
+  font-size: 1.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+}
+/*# sourceMappingURL=style.css.map */

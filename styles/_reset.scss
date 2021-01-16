@@ -1,0 +1,78 @@
+// Font Maps
+
+$p-font-sizes: (
+  null: 1.5rem,
+  480px: 1.6rem,
+  640px: 1.7rem,
+  1024px: 1.9rem,
+);
+
+$h1-font-sizes: (
+  null: 2rem,
+  480px: 2.2rem,
+  640px: 2.5rem,
+  1024px: 2.8rem,
+);
+
+// Mixins
+
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    } @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: $myfont;
+}
+
+h1 {
+  @include font-size($h1-font-sizes);
+}
+
+h2 {
+  font-size: 3.8rem;
+}
+
+h3 {
+  font-size: 3.6rem;
+}
+
+p,
+input,
+button,
+li {
+  @include font-size($p-font-sizes);
+}
+
+caption {
+  font-size: 1.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  font-family: $myfont;
+}
