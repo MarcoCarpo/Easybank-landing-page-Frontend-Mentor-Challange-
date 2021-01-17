@@ -171,6 +171,7 @@ p {
 
 body {
   background: #fafafa;
+  height: auto;
 }
 
 .invite-btn {
@@ -205,13 +206,12 @@ header {
 }
 
 .burgher {
-  width: 2.5rem;
-  height: 1rem;
+  width: 3rem;
+  height: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 0.25rem;
   cursor: pointer;
   position: relative;
 }
@@ -271,6 +271,7 @@ header {
   left: 50%;
   transform: translate(-50%, -29%);
   width: 90%;
+  max-width: 35rem;
 }
 
 .invite-btn-landing {
@@ -354,12 +355,60 @@ header {
   margin-bottom: 3.5rem;
 }
 
+footer {
+  background: #2c304d;
+}
+
+.footer-logo img {
+  display: block;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.footer-links li {
+  margin: 1rem 0;
+}
+
+.footer-links a {
+  color: white;
+}
+
+.footer-btn {
+  margin: 2rem auto;
+}
+
+.footer-copy {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
 .attribution {
+  background: #2c304d;
   font-size: 11px;
   text-align: center;
+  color: white;
+  padding-bottom: 1rem;
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: white;
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */
