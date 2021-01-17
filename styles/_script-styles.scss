@@ -1,0 +1,19 @@
+// Move down the navbar when the burgher is clicked
+.move-navBar {
+  transform: translate(50%, 13vh);
+}
+
+// Animate the burger
+.burgher-anim-top {
+  transform: translate(0, 200%) rotateZ(45deg);
+}
+
+.move-left {
+  transform: translate(-100%, 0);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.burgher-anim-bottom {
+  transform: translate(0, -200%) rotateZ(-45deg);
+}

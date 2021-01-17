@@ -185,18 +185,20 @@ body {
 }
 
 header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.mobile-nav {
   background: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  padding: 0rem 2rem;
-  z-index: 99;
-}
-
-.logo {
-  margin: 1.75rem 0;
+  height: 10vh;
+  padding: 0 10%;
+  z-index: 1;
 }
 
 .logo img {
@@ -225,10 +227,25 @@ header {
 }
 
 .nav-bar {
+  border-radius: 1rem;
   position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, -100%);
+  top: 0;
+  right: 50%;
+  transform: translate(50%, -30vh);
+  width: 80%;
+  background: white;
+  transition: transform 0.4s 0.1s ease-in-out;
+  box-shadow: 0 0rem 15rem 5rem rgba(10, 15, 31, 0.726);
+  z-index: -1;
+}
+
+.nav-links {
+  padding: 2rem 0;
+}
+
+.nav-links li {
+  padding: 1rem 0;
+  text-align: center;
 }
 
 .invite-btn-header {
@@ -410,5 +427,23 @@ footer {
 .attribution a {
   color: white;
   text-decoration: underline;
+}
+
+.move-navBar {
+  transform: translate(50%, 13vh);
+}
+
+.burgher-anim-top {
+  transform: translate(0, 200%) rotateZ(45deg);
+}
+
+.move-left {
+  transform: translate(-100%, 0);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.burgher-anim-bottom {
+  transform: translate(0, -200%) rotateZ(-45deg);
 }
 /*# sourceMappingURL=style.css.map */
