@@ -89,7 +89,7 @@
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .landing {
     &-descr {
       font-size: 2rem;
@@ -109,7 +109,11 @@
     @include flex(row, center, center);
 
     li {
-      padding: 1rem;
+      padding: 2rem;
+    }
+
+    li:hover {
+      border-bottom: 3px solid map-get($map: $mycolors, $key: primary-blue);
     }
   }
 
@@ -130,5 +134,47 @@
     background: none;
     box-shadow: none;
     transform: translate(0, 0);
+  }
+
+  footer {
+    display: grid;
+    grid-template-areas:
+      "logo links button"
+      "icons links copy";
+    padding: 2rem 0;
+  }
+
+  .footer-logo {
+    grid-area: logo;
+  }
+
+  .social-icons {
+    grid-area: icons;
+  }
+
+  .footer-nav {
+    grid-area: links;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 80%;
+
+    li {
+      flex: 1 1 25rem;
+    }
+  }
+
+  .footer-btn {
+    grid-area: button;
+  }
+
+  .footer-copy {
+    grid-area: copy;
   }
 }
