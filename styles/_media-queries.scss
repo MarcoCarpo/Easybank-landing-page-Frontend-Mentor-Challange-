@@ -1,0 +1,134 @@
+@media screen and (min-width: 640px) {
+  .landing {
+    overflow: hidden;
+    background: none;
+    @include flex(row-reverse, space-between, initial);
+    height: 80vh;
+    margin-bottom: 0;
+
+    &-container {
+      @include flex(column, center, initial);
+      height: 100%;
+      margin: 0;
+      padding-top: 6rem;
+      margin-left: 10%;
+      flex: 1;
+    }
+
+    &-title,
+    &-descr {
+      text-align: left;
+    }
+
+    &-descr {
+      font-size: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .invite-btn-landing {
+      margin: 0;
+      width: 20rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  .phones-container {
+    width: 50%;
+    display: grid;
+    place-items: center;
+    background: url("../assets/img/bg-intro-desktop.svg");
+  }
+
+  .phones {
+    position: initial;
+    transform: translate(50%, -0%) scale(2);
+    object-fit: cover;
+    z-index: 99;
+  }
+
+  .services {
+    @include flex(column, center, center);
+
+    &-head {
+      text-align: left;
+    }
+
+    &-items {
+      @include flex(row, flex-start, center);
+      flex-wrap: wrap;
+    }
+  }
+
+  .service {
+    text-align: left;
+    flex: 1 1 20rem;
+
+    &-title {
+      font-size: 3rem;
+    }
+
+    &-descr {
+      font-size: 1.5rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  .articles {
+    margin-bottom: 3rem;
+    &-container {
+      width: 80%;
+      margin: 0 auto;
+      @include flex(row, space-between, initial);
+      flex-wrap: wrap;
+    }
+
+    .article {
+      min-height: 50rem;
+      flex: 0 1 25rem;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .landing {
+    &-descr {
+      font-size: 2rem;
+    }
+  }
+  .main-header {
+    @include flex(row, space-between, center);
+    padding: 0 10%;
+    background: map-get($map: $mycolors, $key: white);
+  }
+  .mobile-nav {
+    background: none;
+    padding: 0;
+  }
+
+  .nav-links {
+    @include flex(row, center, center);
+
+    li {
+      padding: 1rem;
+    }
+  }
+
+  .invite-btn-header {
+    display: initial;
+    margin: 0;
+  }
+
+  .burgher {
+    display: none;
+  }
+  .nav-bar {
+    position: initial;
+    top: initial;
+    right: initial;
+    width: auto;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    transform: translate(0, 0);
+  }
+}

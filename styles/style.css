@@ -39,7 +39,7 @@ h1 {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 @media screen and (min-width: 480px) {
@@ -56,7 +56,7 @@ h2 {
 
 @media screen and (min-width: 1024px) {
   h2 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 }
 
@@ -78,7 +78,7 @@ h3 {
 
 @media screen and (min-width: 1024px) {
   h3 {
-    font-size: 4rem;
+    font-size: 3.6rem;
   }
 }
 
@@ -136,7 +136,7 @@ li {
   input,
   button,
   li {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -184,7 +184,7 @@ body {
   font-size: 1.26rem;
 }
 
-header {
+.main-header {
   position: fixed;
   width: 100%;
   z-index: 999;
@@ -197,6 +197,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 10vh;
+  max-height: 7rem;
   padding: 0 10%;
   z-index: 1;
 }
@@ -231,7 +232,7 @@ header {
   position: absolute;
   top: 0;
   right: 50%;
-  transform: translate(50%, -30vh);
+  transform: translate(50%, -50vh);
   width: 80%;
   background: white;
   transition: transform 0.4s 0.1s ease-in-out;
@@ -253,18 +254,26 @@ header {
 }
 
 .landing {
+  background: url(../assets/img/bg-intro-mobile.svg);
   position: relative;
-  background: #fafafa;
+  background-repeat: no-repeat;
+  background-size: contain;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 7rem;
+  height: 100vh;
 }
 
 .landing-container {
+  height: 45%;
   width: 90%;
   margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .landing-title {
@@ -273,20 +282,18 @@ header {
 
 .landing-descr {
   text-align: center;
-  margin: 2rem;
+  margin: 1rem;
 }
 
-.bg-mobile {
-  width: 100%;
-  height: 30rem;
-  object-fit: cover;
+.phones-container {
+  flex: 1;
 }
 
 .phones {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -29%);
+  transform: translate(-50%, -10%);
   width: 90%;
   max-width: 35rem;
 }
@@ -301,8 +308,15 @@ header {
 }
 
 .services-head {
-  padding: 2rem 2.7rem;
+  width: 80%;
+  margin: 0 auto;
   padding-top: 7rem;
+}
+
+.services-items {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 144rem;
 }
 
 .services-title {
@@ -319,7 +333,7 @@ header {
 }
 
 .service-logo {
-  width: 20%;
+  width: 4;
 }
 
 .service-title {
@@ -329,47 +343,66 @@ header {
 }
 
 .articles {
-  padding-top: 5rem;
   background: #fafafa;
 }
 
 .articles-title {
   text-align: center;
-  margin: 3rem;
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.articles-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .article {
   background: white;
-  width: 90%;
-  margin: 2rem auto;
   border-radius: 1rem;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.article-image {
+  width: 100%;
+  height: 50%;
 }
 
 .article-image img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
 }
 
-.article-header, .article-content {
+.article-content {
   width: 80%;
-  margin: 0 auto;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 1rem;
+  margin: 2rem 0;
 }
 
 .article-header {
-  margin-top: 3rem;
-  padding: 0;
+  width: 100%;
+  display: block;
+  text-align: left;
 }
 
 .article-title {
   font-size: 1.6rem;
-  margin: 1rem 0;
-}
-
-.article-descr {
-  line-height: 1.3;
-  margin-bottom: 3.5rem;
 }
 
 footer {
@@ -388,6 +421,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   width: 50%;
+  max-width: 38rem;
   margin: 0 auto;
 }
 
@@ -427,6 +461,141 @@ footer {
 .attribution a {
   color: white;
   text-decoration: underline;
+}
+
+@media screen and (min-width: 640px) {
+  .landing {
+    overflow: hidden;
+    background: none;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: initial;
+    height: 80vh;
+    margin-bottom: 0;
+  }
+  .landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: initial;
+    height: 100%;
+    margin: 0;
+    padding-top: 6rem;
+    margin-left: 10%;
+    flex: 1;
+  }
+  .landing-title, .landing-descr {
+    text-align: left;
+  }
+  .landing-descr {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+  }
+  .landing .invite-btn-landing {
+    margin: 0;
+    width: 20rem;
+    font-size: 1.8rem;
+  }
+  .phones-container {
+    width: 50%;
+    display: grid;
+    place-items: center;
+    background: url("../assets/img/bg-intro-desktop.svg");
+  }
+  .phones {
+    position: initial;
+    transform: translate(50%, 0%) scale(2);
+    object-fit: cover;
+    z-index: 99;
+  }
+  .services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .services-head {
+    text-align: left;
+  }
+  .services-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .service {
+    text-align: left;
+    flex: 1 1 20rem;
+  }
+  .service-title {
+    font-size: 3rem;
+  }
+  .service-descr {
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+  }
+  .articles {
+    margin-bottom: 3rem;
+  }
+  .articles-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: initial;
+    flex-wrap: wrap;
+  }
+  .articles .article {
+    min-height: 50rem;
+    flex: 0 1 25rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .landing-descr {
+    font-size: 2rem;
+  }
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    background: white;
+  }
+  .mobile-nav {
+    background: none;
+    padding: 0;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-links li {
+    padding: 1rem;
+  }
+  .invite-btn-header {
+    display: initial;
+    margin: 0;
+  }
+  .burgher {
+    display: none;
+  }
+  .nav-bar {
+    position: initial;
+    top: initial;
+    right: initial;
+    width: auto;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    transform: translate(0, 0);
+  }
 }
 
 .move-navBar {
